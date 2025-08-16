@@ -1,6 +1,8 @@
 
 # One Dark Pro Theme for Omarchy
 
+![Omarchy One Dark Pro](./assets/title.png)
+
 A One Dark Pro theme for [Omarchy](https://omarchy.org/), inspired by the popular One Dark Pro editor color scheme.
 
 ### Dark:
