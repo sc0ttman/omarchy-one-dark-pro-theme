@@ -12,8 +12,7 @@ A One Dark Pro theme for [Omarchy](https://omarchy.org/), inspired by the popula
 
 ### Prompt:
 
-My bash prompt is [Starship](https://starship.rs) using the [gruvbox-rainbow Preset](https://starship.rs/presets/gruvbox-rainbow).
-I will probably tweak the colors of that a bit to line up better with OneDark soon.
+The [Starship](https://starship.rs) prompt is based off [gruvbox-rainbow Preset](https://starship.rs/presets/gruvbox-rainbow). Currently you will need to copy [starship.toml](./starship.toml) to your `~/.config` folder.
 
 ## Installation
 

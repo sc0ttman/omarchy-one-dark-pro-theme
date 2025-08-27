@@ -1,0 +1,141 @@
+# Omarchy Config
+# format = "[$directory$git_branch$git_status]($style)$character"
+#
+# [character]
+# error_symbol = "[✗](bold cyan)"
+# success_symbol = "[❯](bold cyan)"
+#
+# [directory]
+# truncation_length = 2
+# truncation_symbol = "…/"
+# repo_root_style = "bold cyan"
+# repo_root_format = "[$repo_root]($repo_root_style)[$path]($style)[$read_only]($read_only_style) "
+#
+# [git_branch]
+# format = "[$branch]($style) "
+# style = "italic cyan"
+#
+# [git_status]
+# format     = '[$all_status]($style)'
+# style      = "cyan"
+# ahead      = "⇡${count} "
+# diverged   = "⇕⇡${ahead_count}⇣${behind_count} "
+# behind     = "⇣${count} "
+# conflicted = " "
+# up_to_date = " "
+# untracked  = "? "
+# modified   = " "
+# stashed    = ""
+# staged     = ""
+# renamed    = ""
+# deleted    = ""
+
+
+format = """
+[](color_orange)\
+$os\
+$username\
+[](bg:color_yellow fg:color_orange)\
+$directory\
+[](fg:color_yellow bg:color_aqua)\
+$git_branch\
+$git_status\
+[](fg:color_aqua bg:color_blue)\
+[](fg:color_blue bg:color_bg3)\
+$docker_context\
+$conda\
+$pixi\
+[](fg:color_bg3 bg:color_bg1)\
+$time\
+[ ](fg:color_bg1)\
+$line_break$character"""
+
+palette = 'one_dark_pro'
+
+[palettes.one_dark_pro]
+color_fg0   = '#ffffff'  # bright foreground
+color_bg1   = '#282c34'  # main background
+color_bg3   = '#3e4451'  # secondary background (One Dark Pro)
+color_blue   = '#61afef' # vivid malibu blue
+color_green  = '#2bbac5' # swapped: fountain blue (cyan)
+color_aqua   = '#689d6a' # swapped: vivid green
+color_orange = '#DA6F3F' # neon orange (custom override)
+color_purple = '#d070ff' # neon purple (custom override)
+color_red    = '#ef596f' # vivid coral red
+color_yellow = '#D29B40' # rich golden yellow (custom override)
+
+[os]
+disabled = false
+style = "bg:color_orange fg:color_fg0"
+
+[os.symbols]
+Windows = "󰍲"
+Ubuntu = "󰕈"
+SUSE = ""
+Raspbian = "󰐿"
+Mint = "󰣭"
+Macos = "󰀵"
+Manjaro = ""
+Linux = "󰌽"
+Gentoo = "󰣨"
+Fedora = "󰣛"
+Alpine = ""
+Amazon = ""
+Android = ""
+Arch = "󰣇"
+Artix = "󰣇"
+EndeavourOS = ""
+CentOS = ""
+Debian = "󰣚"
+Redhat = "󱄛"
+RedHatEnterprise = "󱄛"
+Pop = ""
+
+[username]
+show_always = true
+style_user = "bg:color_orange fg:color_fg0"
+style_root = "bg:color_orange fg:color_fg0"
+format = '[ ]($style)' # no user name
+
+[directory]
+style = "fg:color_fg0 bg:color_yellow"
+format = "[ $path ]($style)"
+truncation_length = 0 # dont truncate
+truncation_symbol = "…/"
+truncate_to_repo = false   # don't cut off at git repo root
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = "󰝚 "
+"Pictures" = " "
+"Developer" = "󰲋 "
+
+[git_branch]
+symbol = ""
+style = "bg:color_aqua"
+format = '[[ $symbol $branch ](fg:color_fg0 bg:color_aqua)]($style)'
+
+[git_status]
+style = "bg:color_aqua"
+format = '[[($all_status$ahead_behind )](fg:color_fg0 bg:color_aqua)]($style)'
+
+[time]
+disabled = false
+use_12hr = true
+# time_format = "%R"
+time_format = "%-I:%M %p"
+style = "bg:color_bg1"
+format = '[[  $time ](fg:color_fg0 bg:color_bg1)]($style)'
+
+[line_break]
+disabled = false
+
+[character]
+disabled = false
+success_symbol = '[](bold fg:color_green)'
+error_symbol = '[](bold fg:color_red)'
+vimcmd_symbol = '[](bold fg:color_green)'
+vimcmd_replace_one_symbol = '[](bold fg:color_purple)'
+vimcmd_replace_symbol = '[](bold fg:color_purple)'
+vimcmd_visual_symbol = '[](bold fg:color_yellow)'
