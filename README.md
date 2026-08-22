@@ -30,7 +30,7 @@ Neovim is the exception: the theme ships its own `neovim.lua` pointing at
 [onedarkpro.nvim](https://github.com/olimorris/onedarkpro.nvim), the upstream
 One Dark Pro port, rather than using the generated palette-driven default.
 
-For Omarchy 3 and earlier, use the [`main`](../../tree/main) branch.
+For Omarchy 3 and earlier, use the [`omarchy-3`](../../tree/omarchy-3) branch.
 
 ## Installation
 
