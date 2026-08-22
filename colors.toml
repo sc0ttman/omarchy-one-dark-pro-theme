@@ -1,0 +1,35 @@
+mode = "dark"
+
+accent = "#61afef"
+selection = "#3e4451"
+muted = "#5c6370"
+
+background = "#282c34"
+dark_background = "#21252b"
+darker_background = "#181a1f"
+lighter_background = "#3e4451"
+
+foreground = "#abb2bf"
+dark_foreground = "#5c6370"
+light_foreground = "#9aa2ad"
+bright_foreground = "#c8ccd4"
+
+red = "#e06c75"
+yellow = "#e5c07b"
+orange = "#d19a66"
+green = "#98c379"
+cyan = "#56b6c2"
+blue = "#61afef"
+magenta = "#c678dd"
+brown = "#be5046"
+
+bright_red = "#e06c75"
+bright_yellow = "#e5c07b"
+bright_green = "#98c379"
+bright_cyan = "#56b6c2"
+bright_blue = "#61afef"
+bright_magenta = "#c678dd"
+
+# Preserves the four-stop active-border gradient the pre-Quattro
+# hyprland.conf defined as: $blue $foam $iris $gold 90deg
+hyprland_active_border = "rgba(61afefff) rgba(56b6c2ff) rgba(c678ddff) rgba(e5c07bff) 90deg"
